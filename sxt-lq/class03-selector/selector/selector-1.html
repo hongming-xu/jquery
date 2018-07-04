@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>记本选择器</title>
+		<style>
+			.astyle{
+				font-size: 28px;
+				color: red;
+			}
+			.bstyle{
+				font-size: 40px;
+				color: orangered;
+				text-decoration: none;
+			}
+		</style>
+		
+		<script src="js/jquery-1.11.3.js"></script>
+		<script>
+			$(function(){
+				//在页面加载完后执行里面的语句
+				//1、*代表所有选择器
+				//jQuery("*").css("border", "1px solid red");
+				//2、类选择器，使用的方法是$(".类名")或者是jQuery(".类名")
+				//$(".bstyle").css("border", "1px solid red");
+				//3、元素选择器,$("标签名")
+				//$("div").css("border", "1px solid red");
+				//4、id选择器-$("#ID") 等价于javascript中的document.getElementById("id")
+				//$("#li3").css("border", "1px solid red");
+				//5、组合选择器,将多个选择器的结果进行组合，使用方法是$("selector1, selector2,...")
+				$("#li3, #li9, .astyle").css("border", "1px solid red");
+			})
+		</script>
+	</head>
+	<body>
+		<div>
+			<li>1.<a href="#">超链接1</a></li>
+			<li>2.<a href="#">超链接2</a></li>
+			<li id="li3">3.<a href="#">超链接3</a></li>
+			<li>4.<a href="#" class="astyle">超链接4</a></li>
+			<li>5.<a href="#">超链接5</a></li>
+			<li>6.<a href="#">超链接6</a></li>
+			<li id="li7">7.<a href="#" class="astyle">超链接7</a></li>
+			<li>8.<a href="#">超链接8</a></li>
+			<li id="li9">9.<a href="#">超链接9</a></li>
+			<li>10.<a href="#" class="bstyle">超链接10</a></li>
+		</div>
+	</body>
+</html>
